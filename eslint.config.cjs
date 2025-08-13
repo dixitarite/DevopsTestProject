@@ -1,8 +1,8 @@
-
 const eslint = require("@eslint/js");
 const tseslint = require("typescript-eslint");
 const angularTs = require("@angular-eslint/eslint-plugin");
 const angularHtml = require("@angular-eslint/eslint-plugin-template");
+
 
 module.exports = tseslint.config(
   // TypeScript files
