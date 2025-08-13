@@ -1,3 +1,4 @@
+
 const eslint = require("@eslint/js");
 const tseslint = require("typescript-eslint");
 const angularTs = require("@angular-eslint/eslint-plugin");
