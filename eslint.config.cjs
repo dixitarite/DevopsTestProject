@@ -1,12 +1,13 @@
+// eslint.config.cjs
 const eslint = require("@eslint/js");
 const tseslint = require("typescript-eslint");
 const angular = require("angular-eslint");
 
-
 module.exports = tseslint.config(
+  // TypeScript files
   {
     files: ["**/*.ts"],
-    ignores: ["coverage/**"],
+    ignores: ["coverage/**", "node_modules/**"],
     extends: [
       eslint.configs.recommended,
       ...tseslint.configs.recommended,
@@ -33,13 +34,15 @@ module.exports = tseslint.config(
       ]
     }
   },
+
+  // HTML template files
   {
     files: ["**/*.html"],
+    ignores: ["coverage/**", "node_modules/**"],
     extends: [
       ...angular.configs.templateRecommended,
       ...angular.configs.templateAccessibility
     ],
-    ignores: ["coverage/**"], 
-    rules: {},
+    rules: {}
   }
 );
